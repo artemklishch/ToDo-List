@@ -24,7 +24,6 @@ class TasksList extends Component {
 
   onCreate = text => {
     const newTask = {
-      createdAt: new Date().toISOString(),
       text,
       done: false,
     };
