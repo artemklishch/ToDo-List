@@ -24,6 +24,7 @@ class TasksList extends Component {
 
   onCreate = text => {
     const newTask = {
+      createdAt: new Date().toISOString(),
       text,
       done: false,
     };
@@ -35,6 +36,7 @@ class TasksList extends Component {
     const changedTask = this.state.tasks.find(task => task.id === id);
     const { text, done } = changedTask;
     const updatedTask = {
+      id,
       text,
       done: !done,
     };
