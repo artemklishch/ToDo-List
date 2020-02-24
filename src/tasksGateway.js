@@ -6,9 +6,7 @@ export const fetchTasksList = () => {
       if (res.ok) {
         return res.json();
       }
-    })
-    .then(tasksList =>
-      tasksList.map(({ _id, ...elem }) => ({ id: _id, ...elem })));
+    });
 };
 
 export const createTask = newTask => {
